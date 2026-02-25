@@ -1,0 +1,422 @@
+﻿{
+    "map":  "usa",
+    "schemaVersion":  1,
+    "provinceFields":  [
+                           "id",
+                           "name_ru",
+                           "name_en",
+                           "popPoints",
+                           "farmLimit",
+                           "resourceLimit"
+                       ],
+    "provinces":  [
+                      {
+                          "id":  "AL",
+                          "name_ru":  "РђР»Р°Р±Р°РјР°",
+                          "name_en":  "Alabama",
+                          "popPoints":  51000,
+                          "farmLimit":  2,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "AK",
+                          "name_ru":  "РђР»СЏСЃРєР°",
+                          "name_en":  "Alaska",
+                          "popPoints":  7300,
+                          "farmLimit":  1,
+                          "resourceLimit":  1
+                      },
+                      {
+                          "id":  "AZ",
+                          "name_ru":  "РђСЂРёР·РѕРЅР°",
+                          "name_en":  "Arizona",
+                          "popPoints":  74000,
+                          "farmLimit":  3,
+                          "resourceLimit":  3
+                      },
+                      {
+                          "id":  "AR",
+                          "name_ru":  "РђСЂРєР°РЅР·Р°СЃ",
+                          "name_en":  "Arkansas",
+                          "popPoints":  30000,
+                          "farmLimit":  1,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "CA",
+                          "name_ru":  "РљР°Р»РёС„РѕСЂРЅРёСЏ",
+                          "name_en":  "California",
+                          "popPoints":  390000,
+                          "farmLimit":  14,
+                          "resourceLimit":  12
+                      },
+                      {
+                          "id":  "CO",
+                          "name_ru":  "РљРѕР»РѕСЂР°РґРѕ",
+                          "name_en":  "Colorado",
+                          "popPoints":  59000,
+                          "farmLimit":  3,
+                          "resourceLimit":  3
+                      },
+                      {
+                          "id":  "CT",
+                          "name_ru":  "РљРѕРЅРЅРµРєС‚РёРєСѓС‚",
+                          "name_en":  "Connecticut",
+                          "popPoints":  36000,
+                          "farmLimit":  2,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "DE",
+                          "name_ru":  "Р”РµР»Р°РІСЌСЂ",
+                          "name_en":  "Delaware",
+                          "popPoints":  10000,
+                          "farmLimit":  1,
+                          "resourceLimit":  1
+                      },
+                      {
+                          "id":  "FL",
+                          "name_ru":  "Р¤Р»РѕСЂРёРґР°",
+                          "name_en":  "Florida",
+                          "popPoints":  222000,
+                          "farmLimit":  10,
+                          "resourceLimit":  7
+                      },
+                      {
+                          "id":  "GA",
+                          "name_ru":  "Р”Р¶РѕСЂРґР¶РёСЏ",
+                          "name_en":  "Georgia",
+                          "popPoints":  109000,
+                          "farmLimit":  5,
+                          "resourceLimit":  4
+                      },
+                      {
+                          "id":  "HI",
+                          "name_ru":  "Р“Р°РІР°Р№Рё",
+                          "name_en":  "Hawaii",
+                          "popPoints":  14000,
+                          "farmLimit":  1,
+                          "resourceLimit":  1
+                      },
+                      {
+                          "id":  "ID",
+                          "name_ru":  "РђР№РґР°С…Рѕ",
+                          "name_en":  "Idaho",
+                          "popPoints":  19000,
+                          "farmLimit":  1,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "IL",
+                          "name_ru":  "РР»Р»РёРЅРѕР№СЃ",
+                          "name_en":  "Illinois",
+                          "popPoints":  126000,
+                          "farmLimit":  6,
+                          "resourceLimit":  5
+                      },
+                      {
+                          "id":  "IN",
+                          "name_ru":  "РРЅРґРёР°РЅР°",
+                          "name_en":  "Indiana",
+                          "popPoints":  68000,
+                          "farmLimit":  3,
+                          "resourceLimit":  3
+                      },
+                      {
+                          "id":  "IA",
+                          "name_ru":  "РђР№РѕРІР°",
+                          "name_en":  "Iowa",
+                          "popPoints":  32000,
+                          "farmLimit":  1,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "KS",
+                          "name_ru":  "РљР°РЅР·Р°СЃ",
+                          "name_en":  "Kansas",
+                          "popPoints":  29000,
+                          "farmLimit":  1,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "KY",
+                          "name_ru":  "РљРµРЅС‚СѓРєРєРё",
+                          "name_en":  "Kentucky",
+                          "popPoints":  45000,
+                          "farmLimit":  2,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "LA",
+                          "name_ru":  "Р›СѓРёР·РёР°РЅР°",
+                          "name_en":  "Louisiana",
+                          "popPoints":  46000,
+                          "farmLimit":  2,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "ME",
+                          "name_ru":  "РњСЌРЅ",
+                          "name_en":  "Maine",
+                          "popPoints":  14000,
+                          "farmLimit":  1,
+                          "resourceLimit":  1
+                      },
+                      {
+                          "id":  "MD",
+                          "name_ru":  "РњСЌСЂРёР»РµРЅРґ",
+                          "name_en":  "Maryland",
+                          "popPoints":  62000,
+                          "farmLimit":  3,
+                          "resourceLimit":  3
+                      },
+                      {
+                          "id":  "MA",
+                          "name_ru":  "РњР°СЃСЃР°С‡СѓСЃРµС‚СЃ",
+                          "name_en":  "Massachusetts",
+                          "popPoints":  70000,
+                          "farmLimit":  3,
+                          "resourceLimit":  3
+                      },
+                      {
+                          "id":  "MI",
+                          "name_ru":  "РњРёС‡РёРіР°РЅ",
+                          "name_en":  "Michigan",
+                          "popPoints":  100000,
+                          "farmLimit":  5,
+                          "resourceLimit":  4
+                      },
+                      {
+                          "id":  "MN",
+                          "name_ru":  "РњРёРЅРЅРµСЃРѕС‚Р°",
+                          "name_en":  "Minnesota",
+                          "popPoints":  58000,
+                          "farmLimit":  3,
+                          "resourceLimit":  3
+                      },
+                      {
+                          "id":  "MS",
+                          "name_ru":  "РњРёСЃСЃРёСЃРёРїРё",
+                          "name_en":  "Mississippi",
+                          "popPoints":  29000,
+                          "farmLimit":  1,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "MO",
+                          "name_ru":  "РњРёСЃСЃСѓСЂРё",
+                          "name_en":  "Missouri",
+                          "popPoints":  62000,
+                          "farmLimit":  3,
+                          "resourceLimit":  3
+                      },
+                      {
+                          "id":  "MT",
+                          "name_ru":  "РњРѕРЅС‚Р°РЅР°",
+                          "name_en":  "Montana",
+                          "popPoints":  11000,
+                          "farmLimit":  1,
+                          "resourceLimit":  1
+                      },
+                      {
+                          "id":  "NE",
+                          "name_ru":  "РќРµР±СЂР°СЃРєР°",
+                          "name_en":  "Nebraska",
+                          "popPoints":  20000,
+                          "farmLimit":  1,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "NV",
+                          "name_ru":  "РќРµРІР°РґР°",
+                          "name_en":  "Nevada",
+                          "popPoints":  32000,
+                          "farmLimit":  1,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "NH",
+                          "name_ru":  "РќСЊСЋ-Р“СЌРјРїС€РёСЂ",
+                          "name_en":  "New Hampshire",
+                          "popPoints":  14000,
+                          "farmLimit":  1,
+                          "resourceLimit":  1
+                      },
+                      {
+                          "id":  "NJ",
+                          "name_ru":  "РќСЊСЋ-Р”Р¶РµСЂСЃРё",
+                          "name_en":  "New Jersey",
+                          "popPoints":  93000,
+                          "farmLimit":  4,
+                          "resourceLimit":  4
+                      },
+                      {
+                          "id":  "NM",
+                          "name_ru":  "РќСЊСЋ-РњРµРєСЃРёРєРѕ",
+                          "name_en":  "New Mexico",
+                          "popPoints":  21000,
+                          "farmLimit":  1,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "NY",
+                          "name_ru":  "РќСЊСЋ-Р™РѕСЂРє",
+                          "name_en":  "New York",
+                          "popPoints":  196000,
+                          "farmLimit":  9,
+                          "resourceLimit":  7
+                      },
+                      {
+                          "id":  "NC",
+                          "name_ru":  "РЎРµРІРµСЂРЅР°СЏ РљР°СЂРѕР»РёРЅР°",
+                          "name_en":  "North Carolina",
+                          "popPoints":  108000,
+                          "farmLimit":  5,
+                          "resourceLimit":  4
+                      },
+                      {
+                          "id":  "ND",
+                          "name_ru":  "РЎРµРІРµСЂРЅР°СЏ Р”Р°РєРѕС‚Р°",
+                          "name_en":  "North Dakota",
+                          "popPoints":  8000,
+                          "farmLimit":  1,
+                          "resourceLimit":  1
+                      },
+                      {
+                          "id":  "OH",
+                          "name_ru":  "РћРіР°Р№Рѕ",
+                          "name_en":  "Ohio",
+                          "popPoints":  118000,
+                          "farmLimit":  5,
+                          "resourceLimit":  4
+                      },
+                      {
+                          "id":  "OK",
+                          "name_ru":  "РћРєР»Р°С…РѕРјР°",
+                          "name_en":  "Oklahoma",
+                          "popPoints":  40000,
+                          "farmLimit":  2,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "OR",
+                          "name_ru":  "РћСЂРµРіРѕРЅ",
+                          "name_en":  "Oregon",
+                          "popPoints":  43000,
+                          "farmLimit":  2,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "PA",
+                          "name_ru":  "РџРµРЅСЃРёР»СЊРІР°РЅРёСЏ",
+                          "name_en":  "Pennsylvania",
+                          "popPoints":  129000,
+                          "farmLimit":  6,
+                          "resourceLimit":  5
+                      },
+                      {
+                          "id":  "RI",
+                          "name_ru":  "Р РѕРґ-РђР№Р»РµРЅРґ",
+                          "name_en":  "Rhode Island",
+                          "popPoints":  11000,
+                          "farmLimit":  1,
+                          "resourceLimit":  1
+                      },
+                      {
+                          "id":  "SC",
+                          "name_ru":  "Р®Р¶РЅР°СЏ РљР°СЂРѕР»РёРЅР°",
+                          "name_en":  "South Carolina",
+                          "popPoints":  54000,
+                          "farmLimit":  2,
+                          "resourceLimit":  3
+                      },
+                      {
+                          "id":  "SD",
+                          "name_ru":  "Р®Р¶РЅР°СЏ Р”Р°РєРѕС‚Р°",
+                          "name_en":  "South Dakota",
+                          "popPoints":  9000,
+                          "farmLimit":  1,
+                          "resourceLimit":  1
+                      },
+                      {
+                          "id":  "TN",
+                          "name_ru":  "РўРµРЅРЅРµСЃСЃРё",
+                          "name_en":  "Tennessee",
+                          "popPoints":  71000,
+                          "farmLimit":  3,
+                          "resourceLimit":  3
+                      },
+                      {
+                          "id":  "TX",
+                          "name_ru":  "РўРµС…Р°СЃ",
+                          "name_en":  "Texas",
+                          "popPoints":  300000,
+                          "farmLimit":  14,
+                          "resourceLimit":  10
+                      },
+                      {
+                          "id":  "UT",
+                          "name_ru":  "Р®С‚Р°",
+                          "name_en":  "Utah",
+                          "popPoints":  34000,
+                          "farmLimit":  2,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "VT",
+                          "name_ru":  "Р’РµСЂРјРѕРЅС‚",
+                          "name_en":  "Vermont",
+                          "popPoints":  6500,
+                          "farmLimit":  1,
+                          "resourceLimit":  1
+                      },
+                      {
+                          "id":  "VA",
+                          "name_ru":  "Р’РёСЂРіРёРЅРёСЏ",
+                          "name_en":  "Virginia",
+                          "popPoints":  87000,
+                          "farmLimit":  4,
+                          "resourceLimit":  3
+                      },
+                      {
+                          "id":  "WA",
+                          "name_ru":  "Р’Р°С€РёРЅРіС‚РѕРЅ",
+                          "name_en":  "Washington",
+                          "popPoints":  78000,
+                          "farmLimit":  4,
+                          "resourceLimit":  3
+                      },
+                      {
+                          "id":  "WV",
+                          "name_ru":  "Р—Р°РїР°РґРЅР°СЏ Р’РёСЂРіРёРЅРёСЏ",
+                          "name_en":  "West Virginia",
+                          "popPoints":  18000,
+                          "farmLimit":  1,
+                          "resourceLimit":  2
+                      },
+                      {
+                          "id":  "WI",
+                          "name_ru":  "Р’РёСЃРєРѕРЅСЃРёРЅ",
+                          "name_en":  "Wisconsin",
+                          "popPoints":  59000,
+                          "farmLimit":  3,
+                          "resourceLimit":  3
+                      },
+                      {
+                          "id":  "WY",
+                          "name_ru":  "Р’Р°Р№РѕРјРёРЅРі",
+                          "name_en":  "Wyoming",
+                          "popPoints":  5800,
+                          "farmLimit":  1,
+                          "resourceLimit":  1
+                      },
+                      {
+                          "id":  "DC",
+                          "name_ru":  "Р’Р°С€РёРЅРіС‚РѕРЅ (РѕРєСЂСѓРі РљРѕР»СѓРјР±РёСЏ)",
+                          "name_en":  "District of Columbia",
+                          "popPoints":  7000,
+                          "farmLimit":  1,
+                          "resourceLimit":  1
+                      }
+                  ]
+}

@@ -1,0 +1,27 @@
+{
+  "technologies": [
+    {
+      "id": "scavenging",
+      "tier": 1,
+      "effects": { "resource_output_mult": 0.9 }
+    },
+    {
+      "id": "basic_tools",
+      "tier": 2,
+      "requires": ["scavenging"],
+      "effects": { "tool_output_mult": 1.1 }
+    },
+    {
+      "id": "standardized_parts",
+      "tier": 3,
+      "requires": ["basic_tools"],
+      "effects": { "resource_output_mult": 1.15 }
+    },
+    {
+      "id": "weapon_factories",
+      "tier": 4,
+      "requires": ["standardized_parts"],
+      "effects": { "weapon_output_mult": 1.25 }
+    }
+  ]
+}

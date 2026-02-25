@@ -1,0 +1,27 @@
+{
+  "technologies": [
+    {
+      "id": "foraging_hunting",
+      "tier": 1,
+      "effects": { "food_output_mult": 1.0 }
+    },
+    {
+      "id": "primitive_farming",
+      "tier": 2,
+      "requires": ["foraging_hunting"],
+      "effects": { "food_output_mult": 1.08, "food_consumption_mult": 0.99, "farm_limit_bonus": 1 }
+    },
+    {
+      "id": "crop_rotation",
+      "tier": 3,
+      "requires": ["primitive_farming"],
+      "effects": { "food_output_mult": 1.16, "food_consumption_mult": 0.98 }
+    },
+    {
+      "id": "irrigation",
+      "tier": 4,
+      "requires": ["crop_rotation"],
+      "effects": { "food_output_mult": 1.25, "food_consumption_mult": 0.97, "farm_limit_bonus": 1 }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "technologies": [
+    {
+      "id": "warbands",
+      "tier": 1,
+      "effects": { "soldiers_cap_per_1000": 105, "actions_military_bonus": 1 }
+    },
+    {
+      "id": "squad_organization",
+      "tier": 2,
+      "requires": ["warbands"],
+      "effects": { "soldiers_cap_per_1000": 110, "actions_military_bonus": 1 }
+    },
+    {
+      "id": "command_structure",
+      "tier": 3,
+      "requires": ["squad_organization"],
+      "effects": { "soldiers_cap_per_1000": 120, "actions_military_bonus": 1 }
+    },
+    {
+      "id": "national_mobilization",
+      "tier": 4,
+      "requires": ["command_structure"],
+      "effects": { "soldiers_cap_per_1000": 130, "actions_military_bonus": 1 }
+    }
+  ]
+}

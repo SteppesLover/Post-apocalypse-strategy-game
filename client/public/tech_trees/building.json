@@ -1,0 +1,105 @@
+{
+  "core_rules": {
+    "population_consumption": {
+      "food_per_person": 0.2
+    },
+    "soldiers": {
+      "population_cap_per_1000": 2,
+      "creation_requires": ["weapons"],
+      "creation_cost": {
+        "weapons": 1
+      }
+    }
+  },
+
+  "buildings": {
+    "ruin": {
+      "workers": 500,
+      "produces": {
+        "food": 20,
+        "resources": 20,
+        "tools": 10
+      },
+      "consumes": {
+        "tools": 1
+      }
+    },
+
+    "farm": {
+      "workers": 1000,
+      "produces": {
+        "food": 150
+      },
+      "consumes": {
+        "tools": 10,
+        "resources": 5
+      },
+      "buildCost": {
+        "tools": 50,
+        "resources": 100
+      }
+    },
+
+    "resource_station": {
+      "workers": 1000,
+      "produces": {
+        "resources": 150
+      },
+      "consumes": {
+        "tools": 5,
+        "food": 5
+      },
+      "buildCost": {
+        "food": 100,
+        "tools": 50
+      }
+    },
+
+    "tool_workshop": {
+      "workers": 1000,
+      "produces": {
+        "tools": 150
+      },
+      "consumes": {
+        "resources": 10,
+        "food": 5
+      },
+      "buildCost": {
+        "food": 100,
+        "resources": 100
+      }
+    },
+
+    "weapon_factory": {
+      "workers": 1000,
+      "produces": {
+        "weapons": 250
+      },
+      "consumes": {
+        "resources": 15,
+        "tools": 5,
+        "food": 5
+      },
+      "buildCost": {
+        "food": 100,
+        "resources": 100,
+        "tools": 100
+      }
+    },
+
+    "university": {
+      "workers": 1000,
+      "produces": {
+        "science": 50
+      },
+      "consumes": {
+        "food": 10,
+        "tools": 10
+      },
+      "buildCost": {
+        "resources": 50,
+        "tools": 50
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "socialInstitutions": {
+    "economic": {
+      "description": "Long-term economic growth and control through governance.",
+      "exclusiveBranches": [
+        {
+          "branchId": "social_state",
+          "nodes": [
+            {
+              "id": "elections",
+              "effects": { "food_output_mult": 1.1 }
+            },
+            {
+              "id": "humanitarian_programs",
+              "requires": ["elections"],
+              "effects": { "food_output_mult": 1.1 }
+            },
+            {
+              "id": "welfare_state",
+              "requires": ["humanitarian_programs"],
+              "effects": {
+                "soldiers_cap_per_1000": 10
+              }
+            }
+          ]
+        },
+        {
+          "branchId": "market_state",
+          "nodes": [
+            {
+              "id": "efficiency_above_all",
+              "effects": { "resource_output_mult": 1.1 }
+            },
+            {
+              "id": "corporate_power",
+              "requires": ["efficiency_above_all"],
+              "effects": { "weapon_output_mult": 1.2 }
+            },
+            {
+              "id": "trade_republic",
+              "requires": ["corporate_power"],
+              "effects": {
+                "soldiers_cap_per_1000": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "military": {
+      "description": "Medium-term focus on military strength and control.",
+      "exclusiveBranches": [
+        {
+          "branchId": "citizen_army",
+          "nodes": [
+            {
+              "id": "military_democracy",
+              "effects": { "soldiers_cap_per_1000": 10 }
+            },
+            {
+              "id": "service_citizenship",
+              "requires": ["military_democracy"],
+              "effects": { "food_output_mult": 0.95 }
+            },
+            {
+              "id": "elected_command",
+              "requires": ["service_citizenship"],
+              "effects": { "soldiers_cap_per_1000": 10 }
+            }
+          ]
+        },
+        {
+          "branchId": "professional_army",
+          "nodes": [
+            {
+              "id": "army_above_all",
+              "effects": { "soldiers_cap_per_1000": 20 }
+            },
+            {
+              "id": "militarized_industry",
+              "requires": ["army_above_all"],
+              "effects": { "weapon_output_mult": 1.3 }
+            },
+            {
+              "id": "mercenary_state",
+              "requires": ["militarized_industry"],
+              "effects": {
+                "soldiers_cap_per_1000": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
