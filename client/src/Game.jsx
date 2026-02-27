@@ -10,8 +10,9 @@ const USA = {
 const LOW_POP_THRESHOLD = 30000;
 
 const fetchJSON = async (url) => {
-  const res = await fetch(assetUrl(url));
-  if (!res.ok) throw new Error(res.statusText);
+  const resolved = assetUrl(url);
+  const res = await fetch(resolved);
+  if (!res.ok) throw new Error(`Failed to load ${resolved} (${res.status})`);
   return res.json();
 };
 
@@ -116,7 +117,10 @@ export default function Game({
     const svgUrl = assetUrl(USA.svg);
     if (!svgUrl) return;
     fetch(svgUrl, { cache: "no-store" })
-      .then((r) => r.text())
+      .then((r) => {
+        if (!r.ok) throw new Error(`Failed to load ${svgUrl} (${r.status})`);
+        return r.text();
+      })
       .then((text) => {
         const withoutTitles = text.replace(/<title[^>]*>[\s\S]*?<\/title>/gi, "");
         if (!ignore) setSvgMarkup(withoutTitles);

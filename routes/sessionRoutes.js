@@ -14,13 +14,10 @@ router.route("/register")
   .post(registerDo);
 
 router.post("/logon", (req, res, next) => {
-  passport.authenticate("local", (err, user, info) => {
+  passport.authenticate("local", { session: false }, (err, user, info) => {
     if (err) return next(err);
     if (!user) return res.status(401).json({ error: info?.message || "Auth failed" });
-    req.logIn(user, (err) => {
-      if (err) return next(err);
-      return res.json({ ok: true, user: { email: user.email, id: user._id }, token: user.createJWT() });
-    });
+    return res.json({ ok: true, user: { email: user.email, id: user._id }, token: user.createJWT() });
   })(req, res, next);
 });
 
