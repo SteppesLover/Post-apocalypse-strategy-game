@@ -102,6 +102,7 @@ const T_EN = {
     science: "Science",
   },
 };
+
 const SAVE_KEY = "warlord_save_v1";
 const TOKEN_KEY = "warlord_jwt_v1";
 
@@ -123,6 +124,7 @@ export default function App() {
       return "";
     }
   };
+
   const apiFetch = async (url, options = {}) => {
     const token = getToken();
     const headers = { ...(options.headers || {}) };
@@ -148,9 +150,7 @@ export default function App() {
   }, []);
 
   const handleLogout = async () => {
-    await apiFetch(`${API}/sessions/logoff`, {
-      method: "POST",
-    });
+    await apiFetch(`${API}/sessions/logoff`, { method: "POST" });
     try {
       localStorage.removeItem(TOKEN_KEY);
     } catch {}
@@ -158,6 +158,7 @@ export default function App() {
     setPhase("setup");
     setGameSetup(null);
   };
+
   const refreshCloudSaves = async () => {
     if (!user?.email) return;
     setCloudLoading(true);
@@ -169,6 +170,7 @@ export default function App() {
       setCloudLoading(false);
     }
   };
+
   useEffect(() => {
     if (user?.email) refreshCloudSaves();
   }, [user?.email]);
@@ -177,6 +179,7 @@ export default function App() {
     setGameSetup({ province, warlordType, warlordCount, playerColor, initialSave: null });
     setPhase("dashboard");
   };
+
   const startCloudGame = (item) => {
     const payload = item?.payload || {};
     const setup = payload?.gameSetup;
@@ -191,11 +194,13 @@ export default function App() {
     });
     setPhase("dashboard");
   };
+
   const deleteCloudSave = async (id) => {
     if (!id) return;
     const res = await apiFetch(`${API}/api/saves/${id}`, { method: "DELETE" });
     if (res.ok) await refreshCloudSaves();
   };
+
   const editCloudSave = async (item) => {
     const id = item?._id;
     if (!id) return;
@@ -210,13 +215,16 @@ export default function App() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title: trimmed }),
     });
+
     if (res.ok) {
       await refreshCloudSaves();
       return;
     }
+
     const data = await res.json().catch(() => ({}));
     window.alert(data?.error || t.renameSaveFail || "Rename failed");
   };
+
   const saveGame = (engineSave) => {
     if (!gameSetup || !engineSave) return false;
     const payload = {
@@ -238,6 +246,7 @@ export default function App() {
       return false;
     }
   };
+
   const saveCloudGame = async (engineSave) => {
     if (!gameSetup || !engineSave) return { ok: false, error: "No save payload" };
     const body = {
@@ -259,11 +268,13 @@ export default function App() {
         engineSave,
       },
     };
+
     const res = await apiFetch(`${API}/api/saves`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
+
     const data = await res.json().catch(() => ({}));
     if (res.ok) {
       await refreshCloudSaves();
@@ -271,6 +282,7 @@ export default function App() {
     }
     return { ok: false, error: data.error || "Cloud save failed" };
   };
+
   const loadGame = () => {
     try {
       const raw = localStorage.getItem(SAVE_KEY);
@@ -285,8 +297,7 @@ export default function App() {
         initialSave: payload.engineSave,
       });
       setPhase("dashboard");
-    } catch {
-    }
+    } catch {}
   };
 
   return (
@@ -341,6 +352,19 @@ export default function App() {
             onSaveCloudGame={saveCloudGame}
           />
         )}
+
+        <footer className="card app-footer">
+          <div className="small"><strong>Game by:</strong> Alan Aman</div>
+          <div className="small">
+            <strong>Email:</strong> <a href="mailto:amanzhanovalikhan@gmail.com">amanzhanovalikhan@gmail.com</a>
+          </div>
+          <div className="small">
+            <strong>Github:</strong>{" "}
+            <a href="https://github.com/SteppesLover/Post-apocalypse-strategy-game" target="_blank" rel="noreferrer">
+              https://github.com/SteppesLover/Post-apocalypse-strategy-game
+            </a>
+          </div>
+        </footer>
       </div>
     </ErrorBoundary>
   );
