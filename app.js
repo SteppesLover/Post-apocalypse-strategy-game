@@ -34,7 +34,9 @@ app.use(cors({
   credentials: true,
 }));
 
-app.use("/maps", express.static(path.join(__dirname, "public", "maps")));
+app.use("/maps", express.static(path.join(__dirname, "client", "public", "maps")));
+app.use("/pops_maps", express.static(path.join(__dirname, "client", "public", "pops_maps")));
+app.use("/tech_trees", express.static(path.join(__dirname, "client", "public", "tech_trees")));
 app.use(express.static(path.join(__dirname, "client", "dist")));
 
 const session = require("express-session");

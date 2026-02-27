@@ -11,10 +11,7 @@ const registerDo = async (req, res, next) => {
   }
   try {
     const user = await User.create(req.body);
-    req.logIn(user, (err) => {
-      if (err) return next(err);
-      return res.json({ ok: true, user: { email: user.email, id: user._id }, token: user.createJWT() });
-    });
+    return res.json({ ok: true, user: { email: user.email, id: user._id }, token: user.createJWT() });
   } catch (e) {
     if (e.code === 11000) return res.status(400).json({ error: "Email already registered" });
     if (e.name === "ValidationError") return res.status(400).json({ error: e.message });
@@ -25,6 +22,7 @@ const registerDo = async (req, res, next) => {
 
 const logoff = (req, res) => {
   req.logout?.(() => {});
+  if (!req.session) return res.json({ ok: true });
   req.session.destroy(function (err) {
     if (err) {
       console.log(err);
