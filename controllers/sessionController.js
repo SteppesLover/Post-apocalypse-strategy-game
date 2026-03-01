@@ -21,7 +21,7 @@ const registerDo = async (req, res, next) => {
 
 
 const logoff = (req, res) => {
-  req.logout?.(() => {});
+  // JWT-based auth does not require Passport session logout.
   if (!req.session) return res.json({ ok: true });
   req.session.destroy(function (err) {
     if (err) {
