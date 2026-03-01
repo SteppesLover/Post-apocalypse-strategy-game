@@ -25,6 +25,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const cors = require("cors");
+let mongoURL = process.env.MONGO_URI;
+if (process.env.NODE_ENV === "test") {
+  mongoURL = process.env.MONGO_URI_TEST;
+}
+
 const allowedOrigins = String(process.env.CORS_ORIGIN || "http://localhost:5173")
   .split(",")
   .map((s) => s.trim())
@@ -41,7 +46,7 @@ app.use(express.static(path.join(__dirname, "client", "dist")));
 
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
-const store = new MongoDBStore({ uri: process.env.MONGO_URI, collection: "mySessions" });
+const store = new MongoDBStore({ uri: mongoURL, collection: "mySessions" });
 store.on("error", console.log);
 
 const sessionParams = {
@@ -102,10 +107,14 @@ app.use((err, req, res, next) => {
 const port = process.env.PORT || 3000;
 const start = async () => {
   try {
-    await require("./db/connect")(process.env.MONGO_URI);
+    await require("./db/connect")(mongoURL);
     app.listen(port, () => console.log(`Server is listening on port ${port}...`));
   } catch (error) {
     console.log(error);
   }
 };
-start();
+if (process.env.NODE_ENV !== "test") {
+  start();
+}
+
+module.exports = app;
